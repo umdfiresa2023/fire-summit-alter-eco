@@ -1,5 +1,4 @@
-Team Name’s FIRE Summit Presentation
-================
+# Team Name’s FIRE Summit Presentation
 Team Members
 
 ## Research Question
@@ -41,3 +40,11 @@ you have one.
 
 Display a figure showing how the treatment variable impacted the outcome
 variable.
+
+![](maddie.png)
+
+``` r
+1+1
+```
+
+    [1] 2

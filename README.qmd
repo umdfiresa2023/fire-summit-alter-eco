@@ -23,7 +23,7 @@ You can also suppress warnings by adding **#\| warning: false**.
 
 ```{r}
 #| warning: false
-
+#| eval: false
 library("tidyverse")
 library("terra")
 library("simplermarkdown")
@@ -40,3 +40,9 @@ Write description, data source, and wrangling methodology. Show a map if you hav
 ## Preliminary Results
 
 Display a figure showing how the treatment variable impacted the outcome variable.
+
+![](maddie.png)
+
+```{r}
+1+1
+```

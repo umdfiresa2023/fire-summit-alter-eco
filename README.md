@@ -39,7 +39,7 @@ The incremental negative effects on the environment are caused by an additional 
 
 The APX Model is the _Air Pollution Emission Experiments & Policy Analysis_ model. It was developed by Nicolas Muller, who is a professor at Carnegie Mellon University. The model takes emissions from every source of pollution, such as agriculture, roads, and power plants as input. Through several algorithms and modeling, it produces the marginal damages for each source of pollution in dollars per ton. 
 
-## What are we doing now?
+## What Are We Doing Now?
 
 Before we are able to replicate the 2016 paper, we must ensure that our code processes raw data from the _National Emissions Inventory_ before it’s used in the AP3 model. The current code to process the data is outdated and difficult to follow, so we are rewriting and updating it. Our updated code should process the raw data in the same way, so we must replicate the results from past years _(2008-2014)_ before we can ensure its accuracy for current use. 
 

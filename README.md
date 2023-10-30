@@ -1,11 +1,10 @@
 # Team Name’s FIRE Summit Presentation
-Team Members
+Kat, Defne, Padmini, William 
 
 ## Research Question
 
-Write research question here.
+How do the marginal damages associated with electric vehicles compare to those of gasoline vehicles in the United States?
 
-(Optional) Insert an image if it helps motivate the research question.
 
 ## Background Project
 

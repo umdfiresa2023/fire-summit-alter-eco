@@ -1,4 +1,4 @@
-# Team Name’s FIRE Summit Presentation
+# Alter-Eco’s FIRE Summit Presentation
 Kat, Defne, Padmini, and William 
 
 ## Research Question

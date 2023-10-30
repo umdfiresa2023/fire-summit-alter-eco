@@ -3,7 +3,7 @@ Kat, Defne, Padmini, and William
 
 ## Research Question
 
-How do the marginal damages associated with electric vehicles compare to those of gasoline vehicles in the United States?
+**How do the marginal damages associated with electric vehicles compare to those of gasoline vehicles in the United States?**
 
 
 ## Background Project

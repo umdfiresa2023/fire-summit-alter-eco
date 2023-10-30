@@ -46,8 +46,48 @@ Before we are able to replicate the 2016 paper, we must ensure that our code pro
 
 
 ``` r
-1+1
+library("tidyverse")
+library("data.table")
+install.packages("arrow")
+library(arrow)
+
+emissions <- list()
+emissionsTemp <- list()
+
+filenames <- c( "G:/Shared drives/2023 FIRE-SA/FALL OUTPUT/Team Alter Eco/Emissions Data/Nonroad/2008/2008neiv3_nonroad_byregions/2008NEIv3_nonroad123.csv", 
+                "G:/Shared drives/2023 FIRE-SA/FALL OUTPUT/Team Alter Eco/Emissions Data/Nonroad/2008/2008neiv3_nonroad_byregions/2008NEIv3_nonroad4.csv", 
+                "G:/Shared drives/2023 FIRE-SA/FALL OUTPUT/Team Alter Eco/Emissions Data/Nonroad/2008/2008neiv3_nonroad_byregions/2008NEIv3_nonroad5.csv", 
+                "G:/Shared drives/2023 FIRE-SA/FALL OUTPUT/Team Alter Eco/Emissions Data/Nonroad/2008/2008neiv3_nonroad_byregions/2008NEIv3_nonroad67.csv", 
+                "G:/Shared drives/2023 FIRE-SA/FALL OUTPUT/Team Alter Eco/Emissions Data/Nonroad/2008/2008neiv3_nonroad_byregions/2008NEIv3_nonroad8910.csv")
+#filenames <- c("2008NEIv3_nonroad123", "2008NEIv3_nonroad4", "2008NEIv3_nonroad5", "2008NEIv3_nonroad67", "2008NEIv3_nonroad8910")
+pollutants<-c("Sulfur Dioxide", "Nitrogen Oxides", "PM2.5 Primary (Filt + Cond)", "Volatile Organic Compounds", "Ammonia")
+
+# counter to determine if current file is the first file 
+counter <- 0
+# looping through each file in 2008 nonroad 
+for(i in filenames){
+  # reads file at index i and stores in nonroad 
+  nonroad <- arrow::read_csv_arrow(i) 
+  
+  print(colnames(nonroad))
+  # stores nonroad in emissionsTemp list 
+  emissionsTemp <- nonroad
+  # cleans emissionsTemp and stores into emissions df 
+  emissions.df<-emissionsTemp %>%
+    # filter description column
+    filter(description %in% pollutants) %>%
+  mutate(total_emissions=as.numeric(total_emissions)) %>%
+  mutate(state_and_county_fips_code=as.numeric(state_and_county_fips_code)) 
+  
+  if (counter == 0){ # if first file
+    emissions[[1]] <- emissions.df
+  } else { # for all other files
+    emissions[[1]] <- rbind(emissions[[1]], emissions.df)
+  }
+  # increments so all other files handled by else 
+  counter <- counter + 1
+}
+
 ```
 
-    [1] 2
 

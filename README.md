@@ -1,5 +1,5 @@
 # Team Name’s FIRE Summit Presentation
-Kat, Defne, Padmini, William 
+Kat, Defne, Padmini, and William 
 
 ## Research Question
 
